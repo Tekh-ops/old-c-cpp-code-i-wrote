@@ -1,0 +1,16 @@
+In computer programming, boilerplate code or just boilerplate are sections 
+of code that have to be included in many places with little or no alteration. 
+When using languages that are considered verbose, the programmer must write a
+lot of code to accomplish only minor functionality. Such code is called boilerplate.
+
+Comment Code Block Ctrl+K+C/Ctrl+K+U
+If you select a block of code and use the key sequence Ctrl+K+C, you'll comment out the section of code. Ctrl+K+U will uncomment the code
+
+in union when one data type is active then the previous data type 
+will be corrupted.
+
+LIFO (last in, first out)
+
+gcc dynamic.c ; size .\a.exe
+
+& is ampercent

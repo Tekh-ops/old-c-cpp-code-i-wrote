@@ -1,0 +1,14 @@
+An lvalue (locator value) represents an object that occupies some identifiable location in memory (i.e. has an address).
+
+rvalues are defined by exclusion. Every expression is either an lvalue or an rvalue, so, an rvalue is an expression that does not represent an object occupying some identifiable location in memory.
+
+For example, An assignment expects an lvalue as its left operand, so the following is valid:
+
+int i = 10;
+But this is not:
+int i;
+10 = i;
+This is because i has an address in memory and is a lvalue. While 10 doesn't have an identifiable memory location and hence is an rvalue. So assigning the value of i to 10 doesn't make any sense.
+
+if i put the cursur on a line and ctr + c and ctr + v will copy
+the line.

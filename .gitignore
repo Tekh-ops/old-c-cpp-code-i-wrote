@@ -1,0 +1,4 @@
+*.out
+
+# Unignore all with extensions
+!*.*

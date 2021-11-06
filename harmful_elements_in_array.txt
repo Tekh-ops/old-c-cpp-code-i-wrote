@@ -1,0 +1,35 @@
+What can be dangerous however, is that I can also ask C to assign values to elements beyond the bounds of my array, and C won’t complain:
+
+#include <stdio.h>
+
+int main ()
+{
+  int grades[5];
+  int i;
+  for (i=0; i<5; i++) {
+    grades[i] = i+1;
+  }
+  grades[5] = 999;
+  grades[500] = 12345;
+  for (i=0; i<6; i++) {
+    printf("grades[%d]=%d\n", i, grades[i]);
+  }
+  printf("grades[500]=%d\n", grades[500]);
+  return 0;
+}
+
+The reason this is dangerous, is that only 20 bytes of memory were set aside for the array yet we are writing to locations in memory that are outside of these boundaries. The location in memory that is 24 bytes beyond the start of the grades array (the location accessed by the expression grades[5]), and the location in memory that is 2004 bytes beyond the start of the array (the location accessed by the expression grades[500]), have not been set aside for the grades array, and these locations in memory may be used to store other important things. They may correspond to some other variable in your program, or they may be storing some information that’s not even part of your program at all, but is part of the operating system — for example some part of the OS that is controlling the hard disk, or the video screen, or the network, or the fans, etc. By writing your data in memory locations that are not within the bounds of memory that has been set aside by you, anything can happen.
+
+One example: imagine you are writing a C program to control a robot arm (as we do in experiments in our lab). What do you think would happen if suddenly you over-wrote some random location in memory? Answer: nothing good!
+
+#include <stdio.h>
+
+int main ()
+{
+  int grades[5] = {[0]=1, [2]=3, [4]=5};
+  int i;
+  for (i=0; i<5; i++) {
+    printf("grades[%d]=%d\n", i, grades[i]);
+  }
+  return 0;
+}

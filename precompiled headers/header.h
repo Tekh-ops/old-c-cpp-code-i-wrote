@@ -1,0 +1,23 @@
+#pragma once
+
+#include <iostream>
+#include <string>
+#include <vector>
+#include <map>
+#include <algorithm>
+#include <functional>
+#include <cmath>
+#include <cstdlib>
+#include <ctime>
+#include <cstdio>
+#include <cstring>
+#include <cassert>
+#include <cctype>
+#include <cfloat>
+#include <climits>
+#include <cstdarg>
+#include <cstddef>
+#include <cstdint>
+#include <cinttypes>
+#include <cwchar>
+#include <cwctype>

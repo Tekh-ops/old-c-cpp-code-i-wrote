@@ -1,0 +1,8 @@
+LIFO- last in, first out
+
+To summarize the stack:
+
+1.the stack grows and shrinks as functions push and pop local variables
+2.there is no need to manage the memory yourself, variables are allocated and freed automatically
+3.the stack has size limits
+4.stack variables only exist while the function that created them, is running.
